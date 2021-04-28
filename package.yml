@@ -1,0 +1,12 @@
+name: markdown-miladiir
+parent: default
+
+matches:
+   - trigger: "mdc"
+     replace: "```
+
+```"
+   - trigger: "mdq"
+     replace: "``"
+   - trigger: "mdl"
+     replace: "[desc](lnk)"
