@@ -2,11 +2,17 @@ name: markdown-miladiir
 parent: default
 
 matches:
-   - trigger: "mdc"
-     replace: "```
 
-```"
+   - trigger: "mdc"
+     replace: "```\n$|$\n```"
+
    - trigger: "mdq"
-     replace: "``"
+     replace: "`$|$`"
+     
    - trigger: "mdl"
-     replace: "[desc](lnk)"
+     form: "[{{description}}]({{link}})"
+     form_fields:
+      description:
+        default: "Description"
+      link:
+        default: "https://example.com"
